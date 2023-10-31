@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  apcupsd:
+    image: gregewing/apcupsd:latest
+    container_name: apcupsd-container
+    ports:
+      - "3551:3551" # Map host port to container port (adjust as needed)
+    volumes:
+      - /etc/apcupsd:/etc/apcupsd # Mount host's apcupsd configuration
+
+
+  # Add other services as needed
